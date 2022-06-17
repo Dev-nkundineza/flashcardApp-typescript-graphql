@@ -8,6 +8,6 @@ const startApolloServer = async () =>{
     await server.start();
     server.applyMiddleware({app});
     const port = process.env.PORT || '4000'
-    app.listen({port},()=> console.log(`Server is running at http://localhost:4000${server.graphqlPath} `))
+    app.listen({port: port},()=> console.log(`Server is running at http://localhost:4000${server.graphqlPath} `))
 }
 startApolloServer();
